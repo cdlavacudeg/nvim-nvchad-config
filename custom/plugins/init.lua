@@ -12,7 +12,7 @@ return {
     end,
   },
 
-  -- overrde plugin configs
+  -- override plugin configs
   ["nvim-treesitter/nvim-treesitter"] = {
     override_options = overrides.treesitter,
   },
@@ -23,6 +23,9 @@ return {
 
   ["kyazdani42/nvim-tree.lua"] = {
     override_options = overrides.nvimtree,
+  },
+  ["lewis6991/gitsigns.nvim"] = {
+    override_options = overrides.gitsigns,
   },
 
   -- Install a plugin
