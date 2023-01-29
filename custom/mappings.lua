@@ -1,6 +1,16 @@
 local M = {}
 
 M.general = {
+  i = {
+    -- go to  beginning and end
+    ["<C-b>"] = { "<ESC>^i", "beginning of line" },
+    ["<C-e>"] = { "<End>", "end of line" },
+    -- navigate within insert mode
+    ["<C-h>"] = { "<Left>", "move left" },
+    ["<C-l>"] = { "<Right>", "move right" },
+    ["<C-j>"] = { "<Down>", "move down" },
+    ["<C-k>"] = { "<Up>", "move up" },
+  },
   n = {
     [";"] = { ":", "command mode", opts = { nowait = true } },
     -- Resize window
@@ -12,16 +22,32 @@ M.general = {
     ["<A-j>"] = { ":m .+1<CR>==", "Move text Up" },
     ["<A-k>"] = { ":m '.-2<CR>==", "Move text Down" },
     -- Delete without overwriting register --
-    ["<leader>d"] = { "\"_d" },
-    ["<leader>D"] = { "\"_d" },
+    ["<leader>d"] = { '"_d' },
+    ["<leader>D"] = { '"_d' },
+    -- line numbers
+    ["<leader>n"] = { "<cmd> set nu! <CR>", "toggle line number" },
+    ["<leader>rn"] = { "<cmd> set rnu! <CR>", "toggle relative number" },
+
+    -- save
+    ["<C-s>"] = { "<cmd> w <CR>", "save file" },
+
+    -- Copy all
+    ["<C-c>"] = { "<cmd> %y+ <CR>", "copy whole file" },
   },
   v = {
     -- Move text
     ["<A-j>"] = { ":m '>+1<CR>gv==gv", "Move text Up" },
     ["<A-k>"] = { ":m '<.-2<CR>gv==gv", "Move text Down" },
-        -- Delete without overwriting register --
-    ["<leader>d"] = { "\"_d" },
-    ["<leader>D"] = { "\"_d" },
+    -- Delete without overwriting register --
+    ["<leader>d"] = { '"_d' },
+    ["<leader>D"] = { '"_d' },
+  },
+  x = {
+    ["<A-j>"] = { ":m '>+1<CR>gv==gv", "Move text Up" },
+    ["<A-k>"] = { ":m '<.-2<CR>gv==gv", "Move text Down" },
+    -- Delete without overwriting register --
+    ["<leader>d"] = { '"_d' },
+    ["<leader>D"] = { '"_d' },
   },
 }
 

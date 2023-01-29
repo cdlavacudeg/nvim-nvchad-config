@@ -9,22 +9,27 @@ local b = null_ls.builtins
 local sources = {
 
   -- webdev stuff
-  b.formatting.prettier.with { filetypes = {
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact",
-        "css",
-        "scss",
-        "less",
-        "html",
-        "json",
-        "jsonc",
-        "yaml",
-        "markdown",
-  } },
+  b.formatting.prettier.with {
+    filetypes = {
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "css",
+      "scss",
+      "less",
+      "html",
+      "json",
+      "jsonc",
+      "yaml",
+      "markdown",
+    },
+  },
 
-  -- Lua
+  -- diagnostics
+  b.diagnostics.eslint,
+
+  -- -- Lua
   b.formatting.stylua,
 }
 

@@ -25,6 +25,7 @@ return {
     override_options = overrides.nvimtree,
   },
   ["lewis6991/gitsigns.nvim"] = {
+    ft = nil,
     override_options = overrides.gitsigns,
   },
 
