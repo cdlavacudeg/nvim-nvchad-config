@@ -21,9 +21,10 @@ return {
     override_options = overrides.mason,
   },
 
-  ["kyazdani42/nvim-tree.lua"] = {
-    override_options = overrides.nvimtree,
-  },
+  -- ["kyazdani42/nvim-tree.lua"] = {
+  --   override_options = overrides.nvimtree,
+  -- },
+
   ["lewis6991/gitsigns.nvim"] = {
     ft = nil,
     override_options = overrides.gitsigns,
@@ -36,6 +37,8 @@ return {
       require("better_escape").setup()
     end,
   },
+
+  ["Exafunction/codeium.vim"] = {},
 
   -- code formatting, linting etc
   ["jose-elias-alvarez/null-ls.nvim"] = {
