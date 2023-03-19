@@ -25,7 +25,7 @@ M.mason = {
 
 -- Nvim tree config
 M.nvimtree = {
-  -- disable_netrw = false,
+  disable_netrw = false,
   -- open_on_setup = true,
   sync_root_with_cwd = false,
   respect_buf_cwd = true,
@@ -36,7 +36,10 @@ M.nvimtree = {
   git = {
     enable = true,
     ignore = false,
-    timeout = 500,
+    timeout = 1000,
+  },
+  diagnostics = {
+    enable = true,
   },
   filters = {
     dotfiles = false,
@@ -48,6 +51,7 @@ M.nvimtree = {
   },
   renderer = {
     root_folder_modifier = ":t",
+    highlight_git = true,
     icons = {
       show = {
         git = true,
