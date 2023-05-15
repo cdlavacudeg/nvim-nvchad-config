@@ -6,7 +6,17 @@ M.treesitter = {
     "lua",
     "html",
     "css",
+    "scss",
+    "sql",
+    "tsx",
+    "javascript",
     "typescript",
+    "dockerfile",
+    "dot",
+    "yaml",
+    "json",
+    "markdown",
+    "python",
   },
 }
 
@@ -20,6 +30,21 @@ M.mason = {
     "css-lsp",
     "html-lsp",
     "typescript-language-server",
+    "eslint-lsp",
+    "eslint_d",
+    "prettier",
+    "json-lsp",
+    -- Front
+    "angular-language-server",
+
+    -- Devops
+    "yaml-language-server",
+    "dot-language-server",
+    "docker-compose-language-server",
+    "dockerfile-language-server",
+
+    -- markdown
+    "marksman",
   },
 }
 

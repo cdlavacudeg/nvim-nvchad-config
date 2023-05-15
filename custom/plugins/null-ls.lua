@@ -27,7 +27,12 @@ local sources = {
   },
 
   -- diagnostics
-  b.diagnostics.eslint,
+  b.diagnostics.eslint.with{
+    filetypes = {
+      "javascript",
+      "javascriptreact",
+    }
+  },
 
   -- -- Lua
   b.formatting.stylua,

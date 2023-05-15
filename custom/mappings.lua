@@ -28,11 +28,11 @@ M.general = {
     ["<leader>n"] = { "<cmd> set nu! <CR>", "toggle line number" },
     ["<leader>rn"] = { "<cmd> set rnu! <CR>", "toggle relative number" },
 
-    -- save
-    ["<C-s>"] = { "<cmd> w <CR>", "save file" },
+    -- -- save
+    -- ["<C-s>"] = { "<cmd> w <CR>", "save file" },
 
     -- Copy all
-    ["<C-c>"] = { "<cmd> %y+ <CR>", "copy whole file" },
+    -- ["<C-c>"] = { "<cmd> %y+ <CR>", "copy whole file" },
   },
   v = {
     -- Move text
