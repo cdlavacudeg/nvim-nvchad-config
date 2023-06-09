@@ -43,6 +43,9 @@ M.mason = {
     "docker-compose-language-server",
     "dockerfile-language-server",
 
+    -- Go
+    "gopls",
+
     -- markdown
     "marksman",
   },
