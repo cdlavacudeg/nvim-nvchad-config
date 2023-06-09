@@ -17,6 +17,11 @@ M.treesitter = {
     "json",
     "markdown",
     "python",
+    "go",
+    "godot_resource",
+    "gomod",
+    "gosum",
+    "gowork",
   },
 }
 

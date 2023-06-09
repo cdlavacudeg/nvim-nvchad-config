@@ -38,7 +38,11 @@ return {
     end,
   },
 
-  ["Exafunction/codeium.vim"] = {},
+  ["Exafunction/codeium.vim"] = {
+    config = function()
+      require "custom.plugins.codeium"
+    end,
+  },
 
   -- code formatting, linting etc
   ["jose-elias-alvarez/null-ls.nvim"] = {
