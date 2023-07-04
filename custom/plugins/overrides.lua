@@ -50,9 +50,6 @@ M.mason = {
 
     -- Go
     "gopls",
-
-    -- markdown
-    "marksman",
   },
 }
 

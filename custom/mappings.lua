@@ -77,4 +77,42 @@ M.nvimtree = {
   },
 }
 
+-- M.dap = {
+--   plugin = true,
+--   n = {
+--     ["<leader>za"] = { "<cmd>lua require'dap'.toggle_breakpoint() <CR>", "DAP toggle breakpoint" },
+--     -- ["<leader>dc"] = { "<cmd>lua require'dap'.continue()<CR>", "DAP continue" },
+--     -- ["<leader>dr"] = { "<cmd>lua require'dap'.repl.toggle()<CR>", "DAP toggle repl" },
+--     -- ["<leader>do"] = { "<cmd>lua require'dap'.step_over()<CR>", "DAP step over" },
+--     -- ["<leader>di"] = { "<cmd>lua require'dap'.step_into()<CR>", "DAP step into" },
+--     -- ["<leader>du"] = { "<cmd>lua require'dap'.step_out()<CR>", "DAP step out" },
+--     -- ["<leader>dus"] = {
+--     --   function()
+--     --     local widgets = require "dap.ui.widgets"
+--     --     local sidebar = widgets.sidebar(widgets.scopes)
+--     --     sidebar.open()
+--     --   end,
+--     --   "DAP open debugging sidebar",
+--     -- },
+--   },
+-- }
+--
+-- M.dap_go = {
+--   plugin = true,
+--   n = {
+--     ["<leader>dgt"] = {
+--       function()
+--         require("dap-go").debug_test()
+--       end,
+--       "Debug go test",
+--     },
+--     ["<leader>dgl"] = {
+--       function()
+--         require("dap-go").debug_last()
+--       end,
+--       "Debug last go test",
+--     },
+--   },
+-- }
+
 return M

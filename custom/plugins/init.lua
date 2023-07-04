@@ -52,6 +52,44 @@ return {
     end,
   },
 
+  -- Debugging
+  -- ["mfussenegger/nvim-dap"] = {
+  --   config = function(_, opts)
+  --     require("dap").setup(opts)
+  --   end,
+  -- },
+  --
+  -- -- Go (delve)
+  -- -- go install github.com/go-delve/delve/cmd/dlv@latest
+  -- ["leoluz/nvim-dap-go"] = {
+  --   ft = "go",
+  --   dependencies = "mfussenegger/nvim-dap",
+  --   config = function(_, opts)
+  --     require("dap-go").setup(opts)
+  --   end,
+  -- },
+  --
+  -- -- dap ui
+  -- ["rcarriga/nvim-dap-ui"] = {
+  --   dependencies = "mfussenegger/nvim-dap",
+  --   config = function()
+  --     require("dapui").setup()
+  --   end,
+  -- },
+  --
+  -- -- Js Node (nvim-dap-vscode-js)
+  -- ["mxsdev/nvim-dap-vscode-js"] = {
+  --   dependencies = "mfussenegger/nvim-dap",
+  --   config = function()
+  --     require("dap-vscode-js").setup()
+  --   end,
+  -- },
+  --
+  -- ["microsoft/vscode-js-debug"] = {
+  --   opt = true,
+  --   run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
+  -- },
+  --
   -- remove plugin
   -- ["hrsh7th/cmp-path"] = false,
 }
