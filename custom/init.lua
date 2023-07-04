@@ -10,3 +10,9 @@ opt.shiftwidth = 2
 
 vim.g.codeium_disable_bindings = true
 vim.g.codeium_no_map_tab = true
+
+-- Treesiter folding
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- Always open folds
+opt.foldlevel = 99
