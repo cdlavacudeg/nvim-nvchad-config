@@ -2,17 +2,17 @@ local M = {}
 
 M.general = {
   i = {
-    -- go to  beginning and end
+    -- Go to  beginning and end
     ["<C-b>"] = { "<ESC>^i", "beginning of line" },
     ["<C-e>"] = { "<End>", "end of line" },
-    -- navigate within insert mode
+    -- Navigate within insert mode
     ["<C-h>"] = { "<Left>", "move left" },
     ["<C-l>"] = { "<Right>", "move right" },
     ["<C-j>"] = { "<Down>", "move down" },
     ["<C-k>"] = { "<Up>", "move up" },
   },
   n = {
-    [";"] = { ":", "command mode", opts = { nowait = true } },
+    -- [";"] = { ":", "command mode", opts = { nowait = true } },
     -- Resize window
     ["<C-Up>"] = { ":resize -2<CR>", "Resize window up" },
     ["<C-Down>"] = { ":resize +2<CR>", "Resize window down" },
@@ -24,15 +24,21 @@ M.general = {
     -- Delete without overwriting register --
     ["<leader>d"] = { '"_d' },
     ["<leader>D"] = { '"_d' },
+    ["<leader>y"] = { '"+y' },
+    ["<leader>Y"] = { '"+Y' },
+    ["<leader>p"] = { '"_dP' },
     -- line numbers
     ["<leader>n"] = { "<cmd> set nu! <CR>", "toggle line number" },
     ["<leader>rn"] = { "<cmd> set rnu! <CR>", "toggle relative number" },
 
-    -- -- save
-    -- ["<C-s>"] = { "<cmd> w <CR>", "save file" },
-
     -- Copy all
-    -- ["<C-c>"] = { "<cmd> %y+ <CR>", "copy whole file" },
+    ["<C-c>"] = { "<cmd> %y+ <CR>", "copy whole file" },
+
+    -- Vertical movement
+    ["<C-d>"] = { "<C-d>zz", "scroll down and center view" },
+    ["<C-u>"] = { "<C-u>zz", "scroll up and center view" },
+    ["n"] = { "nzzzv", "Searching and center view and unfold" },
+    ["N"] = { "Nzzzv", "Searching and center view and unfold" },
   },
   v = {
     -- Move text
@@ -41,6 +47,11 @@ M.general = {
     -- Delete without overwriting register --
     ["<leader>d"] = { '"_d' },
     ["<leader>D"] = { '"_d' },
+    ["<leader>y"] = { '"+y' },
+    ["<leader>Y"] = { '"+Y' },
+    ["<leader>p"] = { '"_dP' },
+    -- Esc
+    ["<C-c>"] = { "<ESC>", "exit visual mode" },
   },
   x = {
     ["<A-j>"] = { ":m '>+1<CR>gv==gv", "Move text Up" },
@@ -48,6 +59,10 @@ M.general = {
     -- Delete without overwriting register --
     ["<leader>d"] = { '"_d' },
     ["<leader>D"] = { '"_d' },
+    ["<leader>y"] = { '"+y' },
+    ["<leader>Y"] = { '"+Y' },
+    ["<leader>p"] = { '"_dP' },
+    ["p"] = { "p", "paste" },
   },
 }
 
