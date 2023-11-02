@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -25,7 +25,7 @@ local plugins = {
   -- -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -60,7 +60,6 @@ local plugins = {
     end,
   },
 
-
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
@@ -74,6 +73,46 @@ local plugins = {
   --   "mg979/vim-visual-multi",
   --   lazy = false,
   -- }
+  -- Go
+  {
+    "olexsmir/gopher.nvim",
+    ft = "go",
+    config = function(_, opts)
+      require("gopher").setup(opts)
+      require("core.utils").load_mappings "gopher"
+    end,
+    build = function()
+      vim.cmd [[silent! GoInstallDeps]]
+    end,
+  },
+
+  -- Debugging
+  {
+    "mfussenegger/nvim-dap",
+    init = function()
+      require("core.utils").load_mappings "dap"
+    end,
+  },
+  --
+  -- -- Go (delve)
+  -- -- go install github.com/go-delve/delve/cmd/dlv@latest
+  {
+    "leoluz/nvim-dap-go",
+    ft = "go",
+    dependencies = "mfussenegger/nvim-dap",
+    config = function(_, opts)
+      require("dap-go").setup(opts)
+      require("core.utils").load_mappings "dap_go"
+    end,
+  },
+  --
+  -- -- dap ui
+  -- ["rcarriga/nvim-dap-ui"] = {
+  --   dependencies = "mfussenegger/nvim-dap",
+  --   config = function()
+  --     require("dapui").setup()
+  --   end,
+  -- },
 }
 
 return plugins
