@@ -58,12 +58,17 @@ M.mason = {
     "dot-language-server",
     "docker-compose-language-service",
     "dockerfile-language-server",
+    "terraform-ls",
+    "tflint",
 
     -- Go
     "gopls",
     "goimports-reviser",
     "gofumpt",
     "golines",
+    "golangci-lint-langserver",
+    "delve",
+    "json-to-struct",
   },
 }
 

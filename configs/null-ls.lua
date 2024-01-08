@@ -31,6 +31,8 @@ local sources = {
     filetypes = {
       "javascript",
       "javascriptreact",
+      "typescript",
+      "typescriptreact",
     },
   },
 
@@ -44,6 +46,10 @@ local sources = {
   b.formatting.goimports_reviser,
   -- go install github.com/segmentio/golines@latest
   b.formatting.golines,
+
+  -- Terraform
+  b.formatting.terraform_fmt,
+  b.diagnostics.terraform_validate,
 }
 
 local autocomandgroup = vim.api.nvim_create_augroup("LspFormatting", {})
