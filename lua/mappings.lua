@@ -39,6 +39,12 @@ M.general = {
     ["<C-u>"] = { "<C-u>zz", "scroll up and center view" },
     ["n"] = { "nzzzv", "Searching and center view and unfold" },
     ["N"] = { "Nzzzv", "Searching and center view and unfold" },
+
+    -- Tmux movements (override NvChad windos movements)
+    ["<C-h>"] = { "<cmd> TmuxNavigateLeft <CR>", "Tmux window left" },
+    ["<C-j>"] = { "<cmd> TmuxNavigateDown <CR>", "Tmux window down" },
+    ["<C-k>"] = { "<cmd> TmuxNavigateUp <CR>", "Tmux window up" },
+    ["<C-l>"] = { "<cmd> TmuxNavigateRight <CR>", "Tmux window right" },
   },
   v = {
     -- Move text

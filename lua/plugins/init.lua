@@ -10,6 +10,10 @@ local overrides = require "configs.overrides"
 --
 return {
   {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
+  {
     "neovim/nvim-lspconfig",
     dependencies = {
       -- format & linting
