@@ -50,6 +50,11 @@ local sources = {
   -- Terraform
   b.formatting.terraform_fmt,
   b.diagnostics.terraform_validate,
+
+  -- Terraform
+  b.diagnostics.mypy,
+  b.diagnostics.ruff,
+  b.formatting.black,
 }
 
 local autocomandgroup = vim.api.nvim_create_augroup("LspFormatting", {})

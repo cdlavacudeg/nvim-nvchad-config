@@ -60,12 +60,20 @@ return {
       require("better_escape").setup()
     end,
   },
+  -- {
+  --   "Exafunction/codeium.vim",
+  --   lazy = false,
+  --   config = function()
+  --     require "configs.codeium"
+  --   end,
+  -- },
+  --
   {
-    "Exafunction/codeium.vim",
+    "github/copilot.vim",
     lazy = false,
-    config = function()
-      require "configs.codeium"
-    end,
+    -- config = function()
+    --   require "configs.copilot"
+    -- end,
   },
 
   -- Go
