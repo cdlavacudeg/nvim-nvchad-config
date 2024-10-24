@@ -71,9 +71,9 @@ return {
   {
     "github/copilot.vim",
     lazy = false,
-    -- config = function()
-    --   require "configs.copilot"
-    -- end,
+    config = function()
+      require "configs.copilot"
+    end,
   },
 
   -- Go

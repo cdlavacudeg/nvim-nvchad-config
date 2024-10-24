@@ -1,3 +1,6 @@
+-- codeium
+vim.g.codeium_disable_bindings = true
+vim.g.codeium_no_map_tab = true
 -- Accept current suggestion
 vim.keymap.set("i", "<C-g>", function()
   return vim.fn["codeium#Accept"]()
